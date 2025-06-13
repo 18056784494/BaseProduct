@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+根据当前的项目结构去开发使用mvvm模式,创建的activity继承项目中的BaseVmDbActivity,创建的viewmodel继承项目中的BaseViewModel,fragment继承项目中的basefragment,网络请求用当前项目中的就行,创建的东西尽量参考项目中现有的方案,对于页面的xml文件<layout> 根节点，支持 DataBinding。
+@={viewModel.xxx} 实现输入、勾选与 ViewModel 的双向绑定。
+android:onClick="@{() -> viewModel.xxx()}" 让按钮直接调用 ViewModel 方法，无需 Activity 处理。把对应的drawable文件也要一起生成. 
+网络请求根据你项目中的网络请求方案，将验证码请求全部切换为suspend+协程+request扩展函数风格，和 NetWorkFragment/NetWorkViewModel 完全一致：

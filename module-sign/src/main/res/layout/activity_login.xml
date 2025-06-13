@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rui.sign.ui.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="#000000"
+        android:paddingTop="60dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zoooo"
+            android:textColor="#fff"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="48dp" />
+
+        <!-- 手机号输入区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_phone_input"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:layout_marginRight="12dp" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:textColor="#fff"
+                android:textColorHint="#888"
+                android:background="@android:color/transparent"
+                android:text="@={viewModel.phone}" />
+        </LinearLayout>
+
+        <!-- 获取验证码按钮 -->
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="获取验证码"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:background="@drawable/bg_btn_white_round"
+            android:onClick="@{() -> viewModel.getCode()}"
+            android:layout_marginBottom="60dp" />
+
+        <!-- 第三方登录按钮 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="40dp">
+            <ImageButton
+                android:id="@+id/btn_wechat"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_circle_white"
+                android:src="@drawable/label_bg"
+                android:scaleType="centerInside"
+                android:layout_marginRight="32dp"
+                android:contentDescription="微信登录" />
+            <ImageButton
+                android:id="@+id/btn_apple"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_circle_white"
+                android:src="@drawable/label_bg"
+                android:scaleType="centerInside"
+                android:contentDescription="苹果登录" />
+        </LinearLayout>
+
+        <!-- 协议勾选和说明 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="32dp">
+            <CheckBox
+                android:id="@+id/cb_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00C800"
+                android:checked="@={viewModel.isAgreementChecked}" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:layout_marginLeft="8dp"
+                android:text="未注册手机号将自动注册。勾选表示您同意我们的《用户协议》，并已阅读并理解我们的《隐私政策》。"
+                android:autoLink="web" />
+        </LinearLayout>
+    </LinearLayout>
+</layout> 
