@@ -31,7 +31,7 @@ class SplashViewModel : BaseViewModel() {
                     {
                         SPUtils.instance.put("showWelDialog", true)
                         Handler(Looper.myLooper()!!).postDelayed({
-                            ARouter.getInstance().build(RouterActivityPath.Sign.PAGER_MOBILE_LOGIN)
+                            ARouter.getInstance().build(RouterActivityPath.Sign.LOGIN)
                                 .navigation()
                             finish()
                         }, 1500)
@@ -63,7 +63,7 @@ class SplashViewModel : BaseViewModel() {
 
         } else {
             Handler(Looper.myLooper()!!).postDelayed({
-                ARouter.getInstance().build(RouterActivityPath.Sign.PAGER_VERIFY_CODE).navigation()
+                ARouter.getInstance().build(RouterActivityPath.Sign.LOGIN).navigation()
                 finish()
             }, 1500)
         }

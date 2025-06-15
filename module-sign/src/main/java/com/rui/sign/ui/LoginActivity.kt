@@ -9,7 +9,7 @@ import com.rui.sign.R
 import com.rui.sign.databinding.ActivityLoginBinding
 import com.rui.mvvmlazy.base.activity.BaseVmDbActivity
 
-@Route(path = RouterActivityPath.Sign.PAGER_MOBILE_LOGIN)
+@Route(path = RouterActivityPath.Sign.LOGIN)
 class LoginActivity : BaseVmDbActivity<LoginViewModel, ActivityLoginBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

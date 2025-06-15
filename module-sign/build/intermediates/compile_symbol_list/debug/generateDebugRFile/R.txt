@@ -4612,6 +4612,7 @@ int menu example_menu 0x0
 int menu example_menu2 0x0
 int menu ucrop_menu_activity 0x0
 int mipmap ic_launcher 0x0
+int mipmap zoooo 0x0
 int plurals mtrl_badge_content_description 0x0
 int raw picture_music 0x0
 int string _xpopup_ext_day 0x0

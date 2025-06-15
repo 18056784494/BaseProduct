@@ -4613,6 +4613,7 @@ menu example_menu
 menu example_menu2
 menu ucrop_menu_activity
 mipmap ic_launcher
+mipmap zoooo
 plurals mtrl_badge_content_description
 raw picture_music
 string _xpopup_ext_day

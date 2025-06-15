@@ -1,6 +1,8 @@
 package com.rui.sign.ui
 
 import androidx.lifecycle.MutableLiveData
+import com.alibaba.android.arouter.launcher.ARouter
+import com.rui.base.router.RouterActivityPath
 import com.rui.mvvmlazy.base.BaseViewModel
 import com.rui.sign.data.repository
 import com.rui.mvvmlazy.ext.request
@@ -33,12 +35,18 @@ class LoginViewModel : BaseViewModel() {
             toastMsg.value = "请勾选协议"
             return
         }
-        request(
-            { repository.sendCode(phoneValue) },
+
+        request({ repository.sendCode(phoneValue) },
             codeResult,
             isShowDialog = true,
             loadingMessage = "正在发送验证码..."
         )
+//        if (codeResult.value is ResultState.Success) {
+            codeSent.value = true
+            ARouter.getInstance().build(RouterActivityPath.Sign.VERIFY_CODE).navigation()
+//        }
+
+
     }
     private fun isPhoneValid(phone: String): Boolean {
         // 中国大陆手机号正则

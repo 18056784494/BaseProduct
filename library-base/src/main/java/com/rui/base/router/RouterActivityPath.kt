@@ -28,9 +28,8 @@ class RouterActivityPath {
      */
     object Sign {
         private const val SIGN = "/sign"
-        const val PAGER_ACCOUNT_LOGIN = SIGN + "/accountLogin"
-        const val PAGER_MOBILE_LOGIN = SIGN + "/mobileLogin"
-        const val PAGER_VERIFY_CODE = SIGN + "/verifyCode"
+        const val LOGIN = SIGN + "/mobileLogin"
+        const val VERIFY_CODE = SIGN + "/verifyCode"
     }
 
     /**

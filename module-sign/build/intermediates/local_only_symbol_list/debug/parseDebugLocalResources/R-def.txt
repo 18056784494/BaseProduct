@@ -21,4 +21,5 @@ id tv_send_tip
 id tv_title
 layout activity_login
 layout activity_verify_code
+mipmap zoooo
 string sign_name
