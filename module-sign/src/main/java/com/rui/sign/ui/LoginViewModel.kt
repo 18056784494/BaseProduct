@@ -10,12 +10,13 @@ import com.rui.mvvmlazy.state.ResultState
 
 class LoginViewModel : BaseViewModel() {
     val phone = MutableLiveData<String>()
-    val smsCode = MutableLiveData<String>()
+    private val smsCode = MutableLiveData<String>()
     val isAgreementChecked = MutableLiveData<Boolean>(false)
     val toastMsg = MutableLiveData<String>()
     val loginSuccess = MutableLiveData<Boolean>()
-    val codeSent = MutableLiveData<Boolean>()
-    val codeResult = MutableLiveData<ResultState<Unit>>()
+    private val codeSent = MutableLiveData<Boolean>()
+    private val codeResult = MutableLiveData<ResultState<Unit>>()
+    val isOneClick =MutableLiveData<Boolean>(true)
 
     override fun initData() {
         super.initData()
@@ -23,11 +24,11 @@ class LoginViewModel : BaseViewModel() {
 
     fun getCode() {
         val phoneValue = phone.value?.trim() ?: ""
-        if (phoneValue.isEmpty()) {
+        if (phoneValue.isEmpty()&& isOneClick.value == false) {
             toastMsg.value = "请输入手机号"
             return
         }
-        if (phoneValue.length != 11||!isPhoneValid(phoneValue)) {
+        if ((phoneValue.length != 11||!isPhoneValid(phoneValue))&& isOneClick.value == false) {
             toastMsg.value = "请输入正确的国内手机号"
             return
         }
@@ -74,5 +75,8 @@ class LoginViewModel : BaseViewModel() {
             loginSuccess.value = true
             toastMsg.value = "登录成功（如未注册则自动注册）"
         }
+    }
+    fun setOneClickStatus() {
+        isOneClick.value = false
     }
 } 

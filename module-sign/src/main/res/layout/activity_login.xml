@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ResourceName">
 
     <data>
         <variable
             name="viewModel"
             type="com.rui.sign.ui.LoginViewModel" />
+        <import type="android.view.View"/>
     </data>
 
     <LinearLayout
@@ -14,7 +17,7 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:background="#000000"
-        android:paddingTop="60dp"
+        android:paddingTop="120dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
@@ -28,6 +31,16 @@
             android:textStyle="bold"
             android:layout_marginBottom="48dp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:textColor="#fff"
+            android:textSize="@dimen/dp28"
+            android:visibility="@{viewModel.isOneClick ? View.VISIBLE:View.GONE}"
+            android:layout_marginBottom="32dp"
+            android:text="186***1235" />
         <!-- 手机号输入区 -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,12 +50,13 @@
             android:gravity="center_vertical"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
+            android:visibility="@{viewModel.isOneClick ? View.GONE:View.VISIBLE}"
             android:layout_marginBottom="32dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+86"
+                android:text="+86 |"
                 android:textColor="#fff"
                 android:textSize="16sp"
                 android:layout_marginRight="12dp" />
@@ -58,6 +72,7 @@
                 android:textColorHint="#888"
                 android:background="@android:color/transparent"
                 android:text="@={viewModel.phone}" />
+
         </LinearLayout>
 
         <!-- 获取验证码按钮 -->
@@ -65,12 +80,28 @@
             android:id="@+id/btn_get_code"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="获取验证码"
+            android:text="@{viewModel.isOneClick  ? `本机号码一键登录`:`获取验证码`}"
             android:textColor="#000"
             android:textSize="18sp"
             android:background="@drawable/bg_btn_white_round"
             android:onClick="@{() -> viewModel.getCode()}"
-            android:layout_marginBottom="60dp" />
+            android:layout_marginBottom="30dp" />
+        <LinearLayout
+            android:visibility="@{viewModel.isOneClick ? View.VISIBLE:View.GONE}"
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:onClick="@{()-> viewModel.setOneClickStatus()}"
+                android:layout_marginLeft="8dp"
+                android:text="其他手机号登录"
+                tools:ignore="UsingOnClickInXml" />
+        </LinearLayout>
+
 
         <!-- 第三方登录按钮 -->
         <LinearLayout
@@ -78,7 +109,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginBottom="40dp">
+            android:layout_marginTop="70dp">
             <ImageButton
                 android:id="@+id/btn_wechat"
                 android:layout_width="56dp"
@@ -103,9 +134,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="32dp">
+            android:layout_marginTop="90dp">
             <CheckBox
+                android:layout_marginTop="@dimen/dp3"
                 android:id="@+id/cb_agree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
