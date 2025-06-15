@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
-        tools:replace="android:name,android:icon,android:theme">
+        tools:replace="android:name,android:icon,android:theme,android:allowBackup">
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />

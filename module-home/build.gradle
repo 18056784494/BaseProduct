@@ -30,5 +30,6 @@ dependencies {
     implementation 'com.luozm.captcha:captcha:1.1.2'
     implementation 'com.github.WGwangguan:SeparatedEditText:v1.2'
     api project(':library-base')
+    implementation 'io.github.yidun:quicklogin:3.4.8'
     kapt rootProject.ext.dependencies["arouter-compiler"]
 }

@@ -27,6 +27,7 @@ kapt {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.?ar'])
     implementation 'com.github.WGwangguan:SeparatedEditText:v1.2'
+    implementation 'io.github.yidun:quicklogin:3.4.8'//网易易盾
     api project(':library-base')
     kapt rootProject.ext.dependencies["arouter-compiler"]
 }

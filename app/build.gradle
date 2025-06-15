@@ -22,6 +22,7 @@ android {
         manifestPlaceholders = [
                 JPUSH_APPKEY : "59c2a793b2eb0b4d4f687612",//极光推送AppKey
                 JPUSH_CHANNEL: "default_developer",
+                allowBackup: "true"
         ]
     }
     lintOptions {
