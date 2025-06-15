@@ -91,5 +91,5 @@ dependencies {
     api rootProject.ext.dependencies["customactivityoncrash"]
 
     api rootProject.ext.dependencies["liveEventBus"]
-    implementation 'io.github.yidun:quicklogin:3.4.8'
+    api 'io.github.yidun:quicklogin:3.4.8'
 }
