@@ -3374,6 +3374,7 @@ drawable base_view_empty_cache
 drawable bg_black_r10
 drawable bg_btn_white_round
 drawable bg_circle_white
+drawable bg_code_box
 drawable bg_dialog_bottom
 drawable bg_draw1
 drawable bg_draw13
@@ -3887,6 +3888,12 @@ id end
 id endToStart
 id end_padder
 id error
+id et_code_0
+id et_code_1
+id et_code_2
+id et_code_3
+id et_code_4
+id et_code_5
 id et_comment
 id et_input
 id et_phone
@@ -3980,6 +3987,7 @@ id line3
 id linear
 id listMode
 id list_item
+id ll_code_container
 id ll_title
 id ll_title_background
 id loadProgress
@@ -4305,8 +4313,10 @@ id tv_no
 id tv_ok
 id tv_pager_indicator
 id tv_prompt
+id tv_resend
 id tv_save
 id tv_selected
+id tv_send_tip
 id tv_sign
 id tv_text
 id tv_title
@@ -4450,6 +4460,7 @@ layout activity_city_list_select
 layout activity_citylist
 layout activity_container
 layout activity_login
+layout activity_verify_code
 layout base_fragment_base_pager
 layout base_toolbar
 layout base_view_pagination

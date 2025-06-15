@@ -4,6 +4,7 @@ import com.alibaba.android.arouter.facade.enums.RouteType;
 import com.alibaba.android.arouter.facade.model.RouteMeta;
 import com.alibaba.android.arouter.facade.template.IRouteGroup;
 import com.rui.sign.ui.LoginActivity;
+import com.rui.sign.ui.VerifyCodeActivity;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Map;
@@ -14,5 +15,6 @@ public class ARouter$$Group$$sign implements IRouteGroup {
   @Override
   public void loadInto(Map<String, RouteMeta> atlas) {
     atlas.put("/sign/mobileLogin", RouteMeta.build(RouteType.ACTIVITY, LoginActivity.class, "/sign/mobilelogin", "sign", null, -1, -2147483648));
+    atlas.put("/sign/verifyCode", RouteMeta.build(RouteType.ACTIVITY, VerifyCodeActivity.class, "/sign/verifycode", "sign", null, -1, -2147483648));
   }
 }

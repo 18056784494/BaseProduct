@@ -33,4 +33,5 @@ class SignRepository : BaseModel(), HttpDataSource, LocalDataSource {
     }
 
     override suspend fun sendCode(phone: String): BaseResponse<Unit> = mHttpDataSource.sendCode(phone)
+    override suspend fun verifyCode(phone: String, code: String): BaseResponse<Unit> = mHttpDataSource.verifyCode(phone, code)
 }

@@ -16,4 +16,8 @@ interface SignApiService {
     @FormUrlEncoded
     @POST("/api/sendCode")
     suspend fun sendCode(@Field("phone") phone: String): BaseResponse<Unit>
+
+    @FormUrlEncoded
+    @POST("/api/verifyCode")
+    suspend fun verifyCode(@Field("phone") phone: String, @Field("code") code: String): BaseResponse<Unit>
 }

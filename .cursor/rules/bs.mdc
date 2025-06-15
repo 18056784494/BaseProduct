@@ -7,3 +7,5 @@ alwaysApply: false
 @={viewModel.xxx} 实现输入、勾选与 ViewModel 的双向绑定。
 android:onClick="@{() -> viewModel.xxx()}" 让按钮直接调用 ViewModel 方法，无需 Activity 处理。把对应的drawable文件也要一起生成. 
 网络请求根据你项目中的网络请求方案，将验证码请求全部切换为suspend+协程+request扩展函数风格，和 NetWorkFragment/NetWorkViewModel 完全一致：
+activity对应的arouter路径文件也要生成
+对应的drawable文件也要生成

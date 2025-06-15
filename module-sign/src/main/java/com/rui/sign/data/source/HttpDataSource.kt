@@ -7,4 +7,5 @@ import com.rui.mvvmlazy.http.BaseResponse
  */
 interface HttpDataSource {
     suspend fun sendCode(phone: String): BaseResponse<Unit>
+    suspend fun verifyCode(phone: String, code: String): BaseResponse<Unit>
 } 

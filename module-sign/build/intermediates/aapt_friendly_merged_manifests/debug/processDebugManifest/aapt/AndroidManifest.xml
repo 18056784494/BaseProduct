@@ -18,6 +18,7 @@
         </provider>
 
         <activity android:name="com.rui.sign.ui.LoginActivity" />
+        <activity android:name="com.rui.sign.ui.VerifyCodeActivity" />
     </application>
 
 </manifest>

@@ -9,4 +9,5 @@ import com.rui.sign.data.source.http.service.SignApiService
  */
 class HttpDataSourceImpl(private val apiService: SignApiService) : HttpDataSource {
     override suspend fun sendCode(phone: String): BaseResponse<Unit> = apiService.sendCode(phone)
+    override suspend fun verifyCode(phone: String, code: String): BaseResponse<Unit> = apiService.verifyCode(phone, code)
 }

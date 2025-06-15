@@ -7,6 +7,7 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.rui.sign.databinding.ActivityLoginBindingImpl;
+import com.rui.sign.databinding.ActivityVerifyCodeBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -20,10 +21,13 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYLOGIN = 1;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(1);
+  private static final int LAYOUT_ACTIVITYVERIFYCODE = 2;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(2);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.rui.sign.R.layout.activity_login, LAYOUT_ACTIVITYLOGIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.rui.sign.R.layout.activity_verify_code, LAYOUT_ACTIVITYVERIFYCODE);
   }
 
   @Override
@@ -40,6 +44,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityLoginBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_login is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYVERIFYCODE: {
+          if ("layout/activity_verify_code_0".equals(tag)) {
+            return new ActivityVerifyCodeBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_verify_code is invalid. Received: " + tag);
         }
       }
     }
@@ -101,10 +111,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(1);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(2);
 
     static {
       sKeys.put("layout/activity_login_0", com.rui.sign.R.layout.activity_login);
+      sKeys.put("layout/activity_verify_code_0", com.rui.sign.R.layout.activity_verify_code);
     }
   }
 }

@@ -63,7 +63,7 @@ class SplashViewModel : BaseViewModel() {
 
         } else {
             Handler(Looper.myLooper()!!).postDelayed({
-                ARouter.getInstance().build(RouterActivityPath.Sign.PAGER_MOBILE_LOGIN).navigation()
+                ARouter.getInstance().build(RouterActivityPath.Sign.PAGER_VERIFY_CODE).navigation()
                 finish()
             }, 1500)
         }

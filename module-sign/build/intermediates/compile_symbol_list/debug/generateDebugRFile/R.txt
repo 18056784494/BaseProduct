@@ -3373,6 +3373,7 @@ int drawable base_view_empty_cache 0x0
 int drawable bg_black_r10 0x0
 int drawable bg_btn_white_round 0x0
 int drawable bg_circle_white 0x0
+int drawable bg_code_box 0x0
 int drawable bg_dialog_bottom 0x0
 int drawable bg_draw1 0x0
 int drawable bg_draw13 0x0
@@ -3886,6 +3887,12 @@ int id end 0x0
 int id endToStart 0x0
 int id end_padder 0x0
 int id error 0x0
+int id et_code_0 0x0
+int id et_code_1 0x0
+int id et_code_2 0x0
+int id et_code_3 0x0
+int id et_code_4 0x0
+int id et_code_5 0x0
 int id et_comment 0x0
 int id et_input 0x0
 int id et_phone 0x0
@@ -3979,6 +3986,7 @@ int id line3 0x0
 int id linear 0x0
 int id listMode 0x0
 int id list_item 0x0
+int id ll_code_container 0x0
 int id ll_title 0x0
 int id ll_title_background 0x0
 int id loadProgress 0x0
@@ -4304,8 +4312,10 @@ int id tv_no 0x0
 int id tv_ok 0x0
 int id tv_pager_indicator 0x0
 int id tv_prompt 0x0
+int id tv_resend 0x0
 int id tv_save 0x0
 int id tv_selected 0x0
+int id tv_send_tip 0x0
 int id tv_sign 0x0
 int id tv_text 0x0
 int id tv_title 0x0
@@ -4449,6 +4459,7 @@ int layout activity_city_list_select 0x0
 int layout activity_citylist 0x0
 int layout activity_container 0x0
 int layout activity_login 0x0
+int layout activity_verify_code 0x0
 int layout base_fragment_base_pager 0x0
 int layout base_toolbar 0x0
 int layout base_view_pagination 0x0

@@ -12,6 +12,7 @@
                 android:value="androidx.startup" />
         </provider>
         <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.VerifyCodeActivity" />
     </application>
 
 </manifest>

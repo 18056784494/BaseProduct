@@ -1,7 +1,7 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:2:1-17:12
-INJECTED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:2:1-17:12
+ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:2:1-18:12
 	package
 		INJECTED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml
 	xmlns:tools
@@ -9,7 +9,7 @@ INJECTED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/Andro
 	xmlns:android
 		ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:4:5-15:19
+ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:4:5-16:19
 provider#androidx.startup.InitializationProvider
 ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:5:9-13:20
 	tools:node
@@ -32,6 +32,10 @@ activity#com.rui.sign.ui.LoginActivity
 ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:14:9-54
 	android:name
 		ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:14:19-51
+activity#com.rui.sign.ui.VerifyCodeActivity
+ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:15:9-59
+	android:name
+		ADDED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml:15:19-56
 uses-sdk
 INJECTED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/wanghongyu/workPlace/BaseProduct/module-sign/src/main/AndroidManifest.xml
