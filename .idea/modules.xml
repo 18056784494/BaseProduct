@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Android框架.iml" filepath="$PROJECT_DIR$/.idea/modules/Android框架.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Android框架.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Android框架.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Android框架.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Android框架.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Android框架.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Android框架.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Android框架.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Android框架.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-base/Android框架.library-base.iml" filepath="$PROJECT_DIR$/.idea/modules/library-base/Android框架.library-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-base/Android框架.library-base.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-base/Android框架.library-base.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-base/Android框架.library-base.main.iml" filepath="$PROJECT_DIR$/.idea/modules/library-base/Android框架.library-base.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-base/Android框架.library-base.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-base/Android框架.library-base.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-mvvmlazy/Android框架.library-mvvmlazy.iml" filepath="$PROJECT_DIR$/.idea/modules/library-mvvmlazy/Android框架.library-mvvmlazy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-mvvmlazy/Android框架.library-mvvmlazy.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-mvvmlazy/Android框架.library-mvvmlazy.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-mvvmlazy/Android框架.library-mvvmlazy.main.iml" filepath="$PROJECT_DIR$/.idea/modules/library-mvvmlazy/Android框架.library-mvvmlazy.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-mvvmlazy/Android框架.library-mvvmlazy.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library-mvvmlazy/Android框架.library-mvvmlazy.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-demo/Android框架.module-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/module-demo/Android框架.module-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-demo/Android框架.module-demo.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module-demo/Android框架.module-demo.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-demo/Android框架.module-demo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/module-demo/Android框架.module-demo.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-demo/Android框架.module-demo.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module-demo/Android框架.module-demo.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-home/Android框架.module-home.iml" filepath="$PROJECT_DIR$/.idea/modules/module-home/Android框架.module-home.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-home/Android框架.module-home.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module-home/Android框架.module-home.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-home/Android框架.module-home.main.iml" filepath="$PROJECT_DIR$/.idea/modules/module-home/Android框架.module-home.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-home/Android框架.module-home.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module-home/Android框架.module-home.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-sign/Android框架.module-sign.iml" filepath="$PROJECT_DIR$/.idea/modules/module-sign/Android框架.module-sign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-sign/Android框架.module-sign.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module-sign/Android框架.module-sign.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-sign/Android框架.module-sign.main.iml" filepath="$PROJECT_DIR$/.idea/modules/module-sign/Android框架.module-sign.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module-sign/Android框架.module-sign.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/module-sign/Android框架.module-sign.unitTest.iml" />
+    </modules>
+  </component>
+</project>

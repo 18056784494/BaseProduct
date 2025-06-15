@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":module-demo:unitTest" external.linked.project.path="$MODULE_DIR$/../../../module-demo" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.type="sourceSet" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet external-system-id="GRADLE" type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+        <option name="PROJECT_TYPE" value="1" />
+      </configuration>
+    </facet>
+    <facet external-system-id="GRADLE" type="kotlin-language" name="Kotlin">
+      <configuration version="5" platform="JVM 17" allPlatforms="JVM [17]" useProjectSettings="false">
+        <additionalVisibleModuleNames>:module-demo:main</additionalVisibleModuleNames>
+        <compilerSettings />
+        <compilerArguments>
+          <flagArguments>
+            <flagArg name="allowNoSourceFiles" arg="true" />
+            <flagArg name="noReflect" arg="true" />
+            <flagArg name="noStdlib" arg="true" />
+          </flagArguments>
+          <stringArguments>
+            <stringArg name="destination" arg="$MODULE_DIR$/../../../module-demo/build/tmp/kotlin-classes/debugUnitTest" />
+            <stringArg name="jvmTarget" arg="17" />
+            <stringArg name="moduleName" arg="module-demo_debugUnitTest" />
+            <stringArg name="apiVersion" arg="1.9" />
+            <stringArg name="languageVersion" arg="1.9" />
+          </stringArguments>
+          <arrayArguments>
+            <arrayArg name="pluginClasspaths" />
+            <arrayArg name="pluginOptions" />
+          </arrayArguments>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
+    <output-test url="file://$MODULE_DIR$/../../../module-demo/build/intermediates/javac/debugUnitTest/compileDebugUnitTestJavaWithJavac/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../module-demo/build/generated/ap_generated_sources/debugUnitTest/out" />
+    <content url="file://$MODULE_DIR$/../../../module-demo/build/generated/source/kapt/debugUnitTest" />
+    <content url="file://$MODULE_DIR$/../../../module-demo/build/generated/source/kaptKotlin/debugUnitTest" />
+    <content url="file://$MODULE_DIR$/../../../module-demo/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../module-demo/src/test/java" isTestSource="true" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../module-demo/src/testDebug" />
+    <orderEntry type="jdk" jdkName="Android API 34, extension level 7 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Android框架.library-base.main" scope="TEST" />
+    <orderEntry type="module-library" exported="" scope="TEST">
+      <library name="Gradle: kaptGeneratedClasses">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../module-demo/build/tmp/kapt3/classes/debugUnitTest" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="Android框架.library-mvvmlazy.main" scope="TEST" />
+    <orderEntry type="module" module-name="Android框架.module-demo.main" scope="TEST" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.geyifeng.immersionbar:immersionbar:3.2.2@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.geyifeng.immersionbar:immersionbar-ktx:3.2.2@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.getActivity:TitleBar:10.5@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.fondesa:recycler-view-divider:3.6.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.recyclerview:recyclerview:1.2.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.core:core:1.12.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.annotation:annotation-experimental:1.3.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.customview:customview:1.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.github.scwang90:refresh-layout-kernel:2.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.github.scwang90:refresh-header-classics:2.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.github.scwang90:refresh-footer-classics:2.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.github.scwang90:refresh-drawable-paint:2.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-commons:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:commons-base:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-coroutines:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-sqlite:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:sqlite-base:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-sdk27:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:platform-base:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-sdk27-coroutines:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-appcompat-v7:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.appcompat:appcompat:1.6.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.activity:activity:1.7.2@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.core:core-ktx:1.12.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.savedstate:savedstate:1.2.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.appcompat:appcompat-resources:1.6.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.vectordrawable:vectordrawable:1.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.vectordrawable:vectordrawable-animated:1.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.interpolator:interpolator:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.cursoradapter:cursoradapter:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.drawerlayout:drawerlayout:1.1.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.fragment:fragment:1.6.2@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.loader:loader:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-livedata:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.arch.core:core-runtime:2.2.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.viewpager:viewpager:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-support-v4:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.legacy:legacy-support-v4:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.media:media:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.documentfile:documentfile:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.print:print:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.legacy:legacy-support-core-ui:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.2.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-support-v4-commons:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:supportV4-base:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:appcompatV7-base:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.li-xiaojun:XPopup:2.10.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.li-xiaojun.XPopupExt:ext:1.0.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.li-xiaojun.XPopupExt:wheelview:1.0.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.databinding:viewbinding:8.3.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.databinding:databinding-runtime:8.3.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.databinding:databinding-adapters:8.3.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.multidex:multidex:2.0.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.material:material:1.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.cardview:cardview:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.dynamicanimation:dynamicanimation:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.transition:transition:1.4.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.viewpager2:viewpager2:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-fragment-ktx:2.7.7@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-fragment:2.7.7@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.fragment:fragment-ktx:1.6.2@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.activity:activity-ktx:1.7.2@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-runtime-ktx:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.savedstate:savedstate-ktx:1.2.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-runtime:2.7.7@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-common:2.7.7@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-runtime-ktx:2.7.7@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-common-ktx:2.7.7@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-ui-ktx:2.7.7@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-ui:2.7.7@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.startup:startup-runtime:1.1.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.room:room-runtime:2.6.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.sqlite:sqlite:2.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.sqlite:sqlite-framework:2.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.room:room-ktx:2.6.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.coil-kt:coil:2.6.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.coil-kt:coil-base:2.6.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.databinding:databinding-ktx:8.3.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-process:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-service:2.7.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.alibaba:arouter-api:1.5.2@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.donkingliang:LabelsView:1.5.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: q.rorbin:badgeview:1.1.3@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.zzhoujay.richtext:richtext:3.0.8@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.LuckSiege.PictureSelector:picture_library:v2.5.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.camera:camera-core:1.0.0-beta01@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.camera:camera-camera2:1.0.0-alpha10@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.LuckSiege.PictureSelector:ucrop:v2.5.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: liji.library.dev:citypickerview:5.2.4@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android:flexbox:2.0.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: me.zhanghai.android.materialratingbar:library:1.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.angcyo.DslTablayout:TabLayout:3.5.5@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.angcyo.DslTablayout:ViewPager1Delegate:3.2.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.angcyo.DslTablayout:ViewPager2Delegate:3.2.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.youth.banner:banner:2.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.RuffianZhong:RWidgetHelper:androidx.v0.0.3@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.iwgang:countdownview:2.1.6@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.guolindev.permissionx:permissionx:1.7.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: cat.ereza:customactivityoncrash:2.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.github.jeremyliao:live-event-bus-x:1.8.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-extensions:2.2.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.annotation:annotation-jvm:1.7.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.9.22" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains:annotations:23.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.arch.core:core-common:2.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-common:2.7.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.20" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.20" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.collection:collection-jvm:1.4.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.li-xiaojun:XPopupExt:1.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.databinding:databinding-common:8.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.constraintlayout:constraintlayout-solver:2.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.collection:collection-ktx:1.4.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.room:room-common:2.6.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okhttp3:okhttp:4.12.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okio:okio-jvm:3.8.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.retrofit2:retrofit:2.9.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.retrofit2:converter-gson:2.9.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.gson:gson:2.10.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.alibaba:arouter-annotation:1.0.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.guava:listenablefuture:1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.github.open-android:pinyin4j:2.5.0" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="Android框架.module-demo.main" />
+</module>

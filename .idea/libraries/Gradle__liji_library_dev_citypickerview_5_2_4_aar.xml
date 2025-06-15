@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: liji.library.dev:citypickerview:5.2.4@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-4/5a906dbb7034535b1a070a3023f4148c/transformed/jetified-citypickerview-5.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/5a906dbb7034535b1a070a3023f4148c/transformed/jetified-citypickerview-5.2.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/5a906dbb7034535b1a070a3023f4148c/transformed/jetified-citypickerview-5.2.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

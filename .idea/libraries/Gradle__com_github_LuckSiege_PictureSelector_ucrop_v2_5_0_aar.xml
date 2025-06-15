@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.LuckSiege.PictureSelector:ucrop:v2.5.0@aar" external-system-id="GRADLE">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-4/fe79385c28f62e0eed273c836bd355a8/transformed/jetified-ucrop-v2.5.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-4/fe79385c28f62e0eed273c836bd355a8/transformed/jetified-ucrop-v2.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/fe79385c28f62e0eed273c836bd355a8/transformed/jetified-ucrop-v2.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/fe79385c28f62e0eed273c836bd355a8/transformed/jetified-ucrop-v2.5.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.LuckSiege.PictureSelector/ucrop/v2.5.0/89f8f4a932be48eee750ade4fe073d07db112fc7/ucrop-v2.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

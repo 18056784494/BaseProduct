@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.scwang90:refresh-header-classics:2.1.0@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-4/1e5758fd28112cb3d831e900643d6e3a/transformed/jetified-refresh-header-classics-2.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/1e5758fd28112cb3d831e900643d6e3a/transformed/jetified-refresh-header-classics-2.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/1e5758fd28112cb3d831e900643d6e3a/transformed/jetified-refresh-header-classics-2.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.scwang90/refresh-header-classics/2.1.0/b16b4f6fe7129dabca01adcbeabf3b8b8ea5bdce/refresh-header-classics-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

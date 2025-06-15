@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.getActivity:TitleBar:10.5@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-4/d9065f4a74b1d798660d55f0cb3c9c77/transformed/jetified-TitleBar-10.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/d9065f4a74b1d798660d55f0cb3c9c77/transformed/jetified-TitleBar-10.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-4/d9065f4a74b1d798660d55f0cb3c9c77/transformed/jetified-TitleBar-10.5/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.getActivity/TitleBar/10.5/ef6cef5ee474ab31d8555f2abd0c6b56ea31e710/TitleBar-10.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
