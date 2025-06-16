@@ -22,7 +22,8 @@ class VerifyCodeActivity : BaseVmDbActivity<VerifyCodeViewModel, ActivityVerifyC
         super.onCreate(savedInstanceState)
         // 获取手机号参数
         val phone = intent.getStringExtra("phone") ?: ""
-        viewModel.start(phone)
+        val codeId = intent.getStringExtra("codeId") ?: ""
+        viewModel.start(phone,codeId)
         setupCodeInputs()
         observeViewModel()
     }

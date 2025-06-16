@@ -137,7 +137,7 @@
                 android:layout_height="match_parent"
                 android:textColor="#fff"
                 android:textSize="13sp"
-                android:text="没有搜到验证码?"/>
+                android:text="没有收到验证码?"/>
             <TextView
                 android:id="@+id/tv_resend"
                 android:layout_width="match_parent"

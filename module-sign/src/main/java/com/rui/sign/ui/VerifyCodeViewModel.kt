@@ -5,19 +5,24 @@ import androidx.lifecycle.MutableLiveData
 import com.rui.mvvmlazy.base.BaseViewModel
 import com.rui.sign.data.repository
 import com.rui.mvvmlazy.ext.request
+import com.rui.mvvmlazy.ext.requestNoCheck
 import com.rui.mvvmlazy.state.ResultState
+import com.rui.mvvmlazy.utils.common.KLog
+import com.rui.sign.data.bean.UserProfile
 
 class VerifyCodeViewModel : BaseViewModel() {
     val sendTip = MutableLiveData<String>()
     val resendText = MutableLiveData<String>("重新发送")
     val canResend = MutableLiveData<Boolean>(false)
-    val codeResult = MutableLiveData<ResultState<Unit>>()
+    val codeResult = MutableLiveData<ResultState<UserProfile>>()
     val codeInput = MutableLiveData<String>() // 6位验证码
     var phone: String = ""
+    var codeId: String = ""
     private var timer: CountDownTimer? = null
 
-    fun start(phone: String) {
+    fun start(phone: String, codeId: String) {
         this.phone = phone
+        this.codeId = codeId
         sendTip.value = "短信验证码已发送至 $phone"
         startTimer()
     }
@@ -25,7 +30,7 @@ class VerifyCodeViewModel : BaseViewModel() {
     fun resendCode() {
         if (canResend.value == true) {
             // 重新发送验证码
-//            request({ repository.sendCode(phone) }, codeResult)
+            verifyCodeAndLogin()
             startTimer()
         }
     }
@@ -47,8 +52,11 @@ class VerifyCodeViewModel : BaseViewModel() {
     fun verifyCodeAndLogin() {
         val code = codeInput.value ?: ""
         if (code.length != 6) return
-        // 假设 repository.verifyCode(phone, code) 校验验证码
-        request({ repository.verifyCode(phone, code) }, {},{})
+        val map = HashMap<String, Any>()
+        map["mobile"] = phone
+        map["codeId"] = codeId
+        map["code"] = code
+        request({ repository.verifyCode(map) }, codeResult)
     }
 
     override fun onCleared() {

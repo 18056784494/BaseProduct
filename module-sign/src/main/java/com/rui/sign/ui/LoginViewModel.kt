@@ -7,6 +7,7 @@ import com.rui.base.router.RouterActivityPath
 import com.rui.mvvmlazy.base.BaseViewModel
 import com.rui.sign.data.repository
 import com.rui.mvvmlazy.ext.request
+import com.rui.mvvmlazy.ext.requestNoCheck
 import com.rui.mvvmlazy.state.ResultState
 import com.rui.mvvmlazy.utils.common.KLog
 
@@ -20,12 +21,8 @@ class LoginViewModel : BaseViewModel() {
     private val codeResult = MutableLiveData<ResultState<Unit>>()
     val isOneClick =MutableLiveData<Boolean>(false)
 
-    override fun initData() {
-        super.initData()
-    }
 
-    fun getCode() {
-//        val phoneValue = phone.value?.trim() ?: "18688888888"
+    fun getCode() {// 发送验证码
         val phoneValue = "18688888888"
         if (phoneValue.isEmpty()&& isOneClick.value == false) {
             toastMsg.value = "请输入手机号"
@@ -41,17 +38,16 @@ class LoginViewModel : BaseViewModel() {
         }
 
         KLog.i("发送验证码请求", "手机号: $phoneValue")
-       var map= HashMap<String, Any>()
-        map.put("mobile",phoneValue)
-
-        request({ repository.sendCode(map) },{
-            KLog.i("验证码请求成功", "响应数据: ")
+        var map= HashMap<String, Any>()
+        map["mobile"] = phoneValue
+        requestNoCheck({ repository.sendCode(map) },{
+            // 直接获取ApiResponse数据
+            KLog.i("验证码请求结果", "响应码: ${it.code}, 响应消息: ${it.msg}, 响应数据: ${Gson().toJson(it.data)}")
+            ARouter.getInstance().build(RouterActivityPath.Sign.VERIFY_CODE).withString("codeId","11111111").withString("phone",phoneValue).navigation()
         },{
-            KLog.e("验证码请求失败", "错误码: ${it.code}, 错误信息: ${it.msg}")
-        })
-        if (codeResult.value is ResultState.Success){
-
-        }
+            // 处理网络异常等错误
+            KLog.e("验证码请求异常", "错误信息: ${it.msg}")
+        }, isShowDialog = true, loadingMessage = "加载中,请稍后..")
 
         if (codeResult.value is ResultState.Success) {
             codeSent.value = true
@@ -64,27 +60,6 @@ class LoginViewModel : BaseViewModel() {
         return regex.matches(phone)
     }
 
-    fun login() {
-        val phoneValue = phone.value?.trim() ?: ""
-        val codeValue = smsCode.value?.trim() ?: ""
-        if (phoneValue.isEmpty()) {
-            toastMsg.value = "请输入手机号"
-            return
-        }
-        if (codeValue.length != 6) {
-            toastMsg.value = "请输入6位验证码"
-            return
-        }
-
-        // TODO: 调用 repository 登录/注册，演示用本地逻辑
-        val networkError = false
-        if (networkError) {
-            toastMsg.value = "网络异常，请稍后再试"
-        } else {
-            loginSuccess.value = true
-            toastMsg.value = "登录成功（如未注册则自动注册）"
-        }
-    }
     fun setOneClickStatus() {
         isOneClick.value = false
     }
