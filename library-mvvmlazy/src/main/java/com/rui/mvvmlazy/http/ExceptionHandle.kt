@@ -24,13 +24,13 @@ object ExceptionHandle {
                 is HttpException -> {
                     ex = AppException(Error.HTTP_ERROR, e)
                     when (it.code()) {
-                        UNAUTHORIZED -> ex.errorMsg = "操作未授权"
-                        FORBIDDEN -> ex.errorMsg = "请求被拒绝"
-                        NOT_FOUND -> ex.errorMsg = "资源不存在"
-                        REQUEST_TIMEOUT -> ex.errorMsg = "服务器执行超时"
-                        INTERNAL_SERVER_ERROR -> ex.errorMsg = "服务器内部错误"
-                        SERVICE_UNAVAILABLE -> ex.errorMsg = "服务器不可用"
-                        else -> ex.errorMsg = "网络错误"
+                        UNAUTHORIZED -> ex.msg = "操作未授权"
+                        FORBIDDEN -> ex.msg = "请求被拒绝"
+                        NOT_FOUND -> ex.msg = "资源不存在"
+                        REQUEST_TIMEOUT -> ex.msg = "服务器执行超时"
+                        INTERNAL_SERVER_ERROR -> ex.msg = "服务器内部错误"
+                        SERVICE_UNAVAILABLE -> ex.msg = "服务器不可用"
+                        else -> ex.msg = "网络错误"
                     }
                     return ex
                 }

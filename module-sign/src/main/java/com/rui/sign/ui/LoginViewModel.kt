@@ -25,7 +25,8 @@ class LoginViewModel : BaseViewModel() {
     }
 
     fun getCode() {
-        val phoneValue = phone.value?.trim() ?: "18688888888"
+//        val phoneValue = phone.value?.trim() ?: "18688888888"
+        val phoneValue = "18688888888"
         if (phoneValue.isEmpty()&& isOneClick.value == false) {
             toastMsg.value = "请输入手机号"
             return
@@ -42,13 +43,15 @@ class LoginViewModel : BaseViewModel() {
         KLog.i("发送验证码请求", "手机号: $phoneValue")
        var map= HashMap<String, Any>()
         map.put("mobile",phoneValue)
+
         request({ repository.sendCode(map) },{
-            val toJson = Gson().toJson(it)
-            KLog.i("验证码请求成功", "响应数据: $toJson")
+            KLog.i("验证码请求成功", "响应数据: ")
         },{
-            KLog.e("验证码请求失败", "错误码: ${it.errCode}, 错误信息: ${it.message}")
-//            toastMsg.value = "获取验证码失败: ${it.errorMsg}"
+            KLog.e("验证码请求失败", "错误码: ${it.code}, 错误信息: ${it.msg}")
         })
+        if (codeResult.value is ResultState.Success){
+
+        }
 
         if (codeResult.value is ResultState.Success) {
             codeSent.value = true

@@ -35,7 +35,7 @@ class NetWorkFragment : BaseVmDbFragment<NetWorkViewModel,TestFragmentNetWorkBin
             parseState(resultState, {
                 viewModel.netDataStr.value = Gson().toJson(it)
             }, {
-                ToastUtils.showShort(it.errorMsg)
+                ToastUtils.showShort(it.msg)
             })
         }
     }
