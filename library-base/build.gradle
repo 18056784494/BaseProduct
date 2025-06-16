@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 android {
     namespace 'com.rui.base'
@@ -91,5 +92,7 @@ dependencies {
     api rootProject.ext.dependencies["customactivityoncrash"]
 
     api rootProject.ext.dependencies["liveEventBus"]
+    api rootProject.ext.dependencies["MMKV"]
     api 'io.github.yidun:quicklogin:3.4.8'
+
 }

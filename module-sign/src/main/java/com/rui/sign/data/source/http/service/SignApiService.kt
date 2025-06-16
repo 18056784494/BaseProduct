@@ -1,8 +1,8 @@
 package com.rui.sign.data.source.http.service
 
 import com.rui.base.entity.ApiResponse
+import com.rui.base.entity.UserProfile
 import com.rui.sign.data.bean.Code
-import com.rui.sign.data.bean.UserProfile
 import retrofit2.http.Body
 import retrofit2.http.POST
 

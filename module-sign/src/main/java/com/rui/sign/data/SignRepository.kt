@@ -1,15 +1,13 @@
 package com.rui.sign.data
 
 import com.rui.base.entity.ApiResponse
+import com.rui.base.entity.UserProfile
 import com.rui.base.network.RetrofitClient
 import com.rui.mvvmlazy.base.BaseModel
 import com.rui.sign.data.bean.Code
-import com.rui.sign.data.bean.UserProfile
 import com.rui.sign.data.source.HttpDataSource
-import com.rui.sign.data.source.LocalDataSource
 import com.rui.sign.data.source.http.HttpDataSourceImpl
 import com.rui.sign.data.source.http.service.SignApiService
-import com.rui.sign.data.source.local.LocalDataSourceImpl
 
 /**
  * ******************************
@@ -22,16 +20,13 @@ val repository: SignRepository by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED)
     SignRepository()
 }
 
-class SignRepository : BaseModel(), HttpDataSource, LocalDataSource {
+class SignRepository : BaseModel(), HttpDataSource {
     private val mHttpDataSource by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
         HttpDataSourceImpl(
             RetrofitClient.instance.create(
                 SignApiService::class.java
             )
         )
-    }
-    private val mLocalDataSource by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
-        LocalDataSourceImpl()
     }
 
     override suspend fun sendCode(map: HashMap<String, Any>): ApiResponse<Code> = mHttpDataSource.sendCode(map)

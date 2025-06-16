@@ -2,13 +2,11 @@ package com.rui.sign.ui
 
 import android.os.CountDownTimer
 import androidx.lifecycle.MutableLiveData
+import com.rui.base.entity.UserProfile
 import com.rui.mvvmlazy.base.BaseViewModel
 import com.rui.sign.data.repository
 import com.rui.mvvmlazy.ext.request
-import com.rui.mvvmlazy.ext.requestNoCheck
 import com.rui.mvvmlazy.state.ResultState
-import com.rui.mvvmlazy.utils.common.KLog
-import com.rui.sign.data.bean.UserProfile
 
 class VerifyCodeViewModel : BaseViewModel() {
     val sendTip = MutableLiveData<String>()
@@ -56,7 +54,13 @@ class VerifyCodeViewModel : BaseViewModel() {
         map["mobile"] = phone
         map["codeId"] = codeId
         map["code"] = code
-        request({ repository.verifyCode(map) }, codeResult)
+//        request({ repository.verifyCode(map) }, codeResult)
+        request(
+            { repository.verifyCode(map) },
+            codeResult,
+            isShowDialog = true,
+            loadingMessage = "加载中,请稍后.."
+        )
     }
 
     override fun onCleared() {

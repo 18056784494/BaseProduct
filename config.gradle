@@ -65,12 +65,9 @@ ext {
             //json解析
             "gson"                         : "com.google.code.gson:gson:2.10.1",
             'junit'                        : "junit:junit:${versions["junit-version"]}",
-
+            'MMKV'                         : 'com.tencent:mmkv-static:1.2.5'
 
     ]
-    deps = [
-            'fastjson'                     : 'com.alibaba:fastjson:1.2.73',
-            'MMKV'                         : 'com.tencent:mmkv-static:1.2.5']
 }
 
 

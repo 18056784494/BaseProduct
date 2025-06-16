@@ -1,8 +1,8 @@
 package com.rui.sign.data.source
 
 import com.rui.base.entity.ApiResponse
+import com.rui.base.entity.UserProfile
 import com.rui.sign.data.bean.Code
-import com.rui.sign.data.bean.UserProfile
 
 /**
  * Created by zjr on 2019/3/26.

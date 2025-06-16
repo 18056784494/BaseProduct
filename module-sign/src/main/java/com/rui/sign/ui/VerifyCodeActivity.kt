@@ -7,7 +7,9 @@ import android.view.KeyEvent
 import android.widget.EditText
 import androidx.lifecycle.Observer
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.google.gson.Gson
 import com.rui.base.router.RouterActivityPath
+import com.rui.base.data.UserManager
 import com.rui.sign.BR
 import com.rui.sign.R
 import com.rui.sign.databinding.ActivityVerifyCodeBinding
@@ -78,20 +80,23 @@ class VerifyCodeActivity : BaseVmDbActivity<VerifyCodeViewModel, ActivityVerifyC
     }
 
     private fun observeViewModel() {
-        viewModel.codeResult.observe(this, Observer { resultState ->
-            parseState(resultState, {
+        viewModel.codeResult.observe(this) { resultState ->
+            parseState(resultState, { userProfile ->
+                // 保存用户数据
+                UserManager.saveUserProfile(userProfile)
+                
                 // 验证码校验成功，跳转主页
                 ToastUtils.showShort("登录成功")
                 // TODO: 跳转主页
                 // 示例: ARouter.getInstance().build(RouterActivityPath.Main.PAGER_MAIN).navigation()
-                // finish()
+                finish()
             }, {
                 // 验证码校验失败
                 ToastUtils.showShort("验证码无效，请重新输入")
                 codeInputs.forEach { it.setText("") } // 清除所有输入
                 codeInputs[0].requestFocus() // 聚焦到第一个输入框
             })
-        })
+        }
     }
 
     override fun onBackPressed() {
