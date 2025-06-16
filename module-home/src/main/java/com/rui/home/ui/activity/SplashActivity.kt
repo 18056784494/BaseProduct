@@ -53,7 +53,7 @@ class SplashActivity : BaseVmDbActivity<SplashViewModel, HomeActivitySplashBindi
             }
             .request { allGranted, grantedList, deniedList ->
                 if (allGranted) {
-                    initQuickLogin()
+//                    initQuickLogin()
                     ARouter.getInstance().build(RouterActivityPath.Sign.LOGIN).navigation()
                 } else {
                     showDialog("These permissions are denied: $deniedList")

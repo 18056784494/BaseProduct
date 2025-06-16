@@ -1,8 +1,10 @@
 package com.rui.sign.data
 
+import com.rui.base.entity.ApiResponse
 import com.rui.mvvmlazy.http.BaseResponse
 import com.rui.base.network.RetrofitClient
 import com.rui.mvvmlazy.base.BaseModel
+import com.rui.sign.Login
 import com.rui.sign.data.source.HttpDataSource
 import com.rui.sign.data.source.LocalDataSource
 import com.rui.sign.data.source.http.HttpDataSourceImpl
@@ -32,6 +34,6 @@ class SignRepository : BaseModel(), HttpDataSource, LocalDataSource {
         LocalDataSourceImpl()
     }
 
-    override suspend fun sendCode(phone: String): BaseResponse<Unit> = mHttpDataSource.sendCode(phone)
-    override suspend fun verifyCode(phone: String, code: String): BaseResponse<Unit> = mHttpDataSource.verifyCode(phone, code)
+    override suspend fun sendCode(mobile: HashMap<String, Any>): ApiResponse<Login> = mHttpDataSource.sendCode(mobile)
+    override suspend fun verifyCode(phone: String, code: String): ApiResponse<String> = mHttpDataSource.verifyCode(phone, code)
 }

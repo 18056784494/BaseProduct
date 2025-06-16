@@ -25,7 +25,7 @@ class VerifyCodeViewModel : BaseViewModel() {
     fun resendCode() {
         if (canResend.value == true) {
             // 重新发送验证码
-            request({ repository.sendCode(phone) }, codeResult)
+//            request({ repository.sendCode(phone) }, codeResult)
             startTimer()
         }
     }
@@ -48,7 +48,7 @@ class VerifyCodeViewModel : BaseViewModel() {
         val code = codeInput.value ?: ""
         if (code.length != 6) return
         // 假设 repository.verifyCode(phone, code) 校验验证码
-        request({ repository.verifyCode(phone, code) }, codeResult)
+        request({ repository.verifyCode(phone, code) }, {},{})
     }
 
     override fun onCleared() {

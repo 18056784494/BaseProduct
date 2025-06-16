@@ -2,11 +2,13 @@ package com.rui.sign.ui
 
 import androidx.lifecycle.MutableLiveData
 import com.alibaba.android.arouter.launcher.ARouter
+import com.google.gson.Gson
 import com.rui.base.router.RouterActivityPath
 import com.rui.mvvmlazy.base.BaseViewModel
 import com.rui.sign.data.repository
 import com.rui.mvvmlazy.ext.request
 import com.rui.mvvmlazy.state.ResultState
+import com.rui.mvvmlazy.utils.common.KLog
 
 class LoginViewModel : BaseViewModel() {
     val phone = MutableLiveData<String>()
@@ -16,14 +18,14 @@ class LoginViewModel : BaseViewModel() {
     val loginSuccess = MutableLiveData<Boolean>()
     private val codeSent = MutableLiveData<Boolean>()
     private val codeResult = MutableLiveData<ResultState<Unit>>()
-    val isOneClick =MutableLiveData<Boolean>(true)
+    val isOneClick =MutableLiveData<Boolean>(false)
 
     override fun initData() {
         super.initData()
     }
 
     fun getCode() {
-        val phoneValue = phone.value?.trim() ?: ""
+        val phoneValue = phone.value?.trim() ?: "18688888888"
         if (phoneValue.isEmpty()&& isOneClick.value == false) {
             toastMsg.value = "请输入手机号"
             return
@@ -37,17 +39,21 @@ class LoginViewModel : BaseViewModel() {
             return
         }
 
-        request({ repository.sendCode(phoneValue) },
-            codeResult,
-            isShowDialog = true,
-            loadingMessage = "正在发送验证码..."
-        )
-//        if (codeResult.value is ResultState.Success) {
+        KLog.i("发送验证码请求", "手机号: $phoneValue")
+       var map= HashMap<String, Any>()
+        map.put("mobile",phoneValue)
+        request({ repository.sendCode(map) },{
+            val toJson = Gson().toJson(it)
+            KLog.i("验证码请求成功", "响应数据: $toJson")
+        },{
+            KLog.e("验证码请求失败", "错误码: ${it.errCode}, 错误信息: ${it.message}")
+//            toastMsg.value = "获取验证码失败: ${it.errorMsg}"
+        })
+
+        if (codeResult.value is ResultState.Success) {
             codeSent.value = true
             ARouter.getInstance().build(RouterActivityPath.Sign.VERIFY_CODE).navigation()
-//        }
-
-
+        }
     }
     private fun isPhoneValid(phone: String): Boolean {
         // 中国大陆手机号正则

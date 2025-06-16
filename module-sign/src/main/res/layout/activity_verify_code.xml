@@ -118,27 +118,36 @@
             android:id="@+id/tv_send_tip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:layout_marginLeft="20dp"
+            android:text='@{viewModel.sendTip}'
             android:textColor="#fff"
-            android:textSize="13sp"
-            android:layout_marginTop="32dp"
-            android:text='@{viewModel.sendTip}' />
+            android:layout_gravity="left"
+            android:textSize="13sp" />
 
         <LinearLayout
-            android:layout_gravity="left|bottom"
+            android:layout_gravity="left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="150dp">
+            android:layout_marginTop="20dp">
             <TextView
-                android:id="@+id/tv_resend"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:textColor="#fff"
                 android:textSize="13sp"
-                android:text='@{viewModel.resendText}'
+                android:text="没有搜到验证码?"/>
+            <TextView
+                android:id="@+id/tv_resend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp5"
                 android:enabled='@{viewModel.canResend}'
-                android:onClick="@{() -> viewModel.resendCode()}" />
+                android:onClick="@{() -> viewModel.resendCode()}"
+                android:text='@{viewModel.resendText}'
+                android:textColor="#fff"
+                android:textSize="13sp" />
         </LinearLayout>
         <Button
             android:visibility="gone"

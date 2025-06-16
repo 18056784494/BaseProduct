@@ -11,15 +11,15 @@ import com.rui.mvvmlazy.http.BaseResponse
  * 2.重写isSucces 方法，编写你的业务需求，根据自己的条件判断数据是否请求成功
  * 3.重写 getResponseCode、getResponseData、getResponseMsg方法，传入你的 code data msg
  */
-data class ApiResponse<T>(val code: Int, val message: String, val result: T) :
+data class ApiResponse<T>(val code: Int, val msg: String, val data: T) :
     BaseResponse<T>() {
 
     override fun isSuccess() = code == 200
 
     override fun getResponseCode() = code
 
-    override fun getResponseData() = result
+    override fun getResponseData() = data
 
-    override fun getResponseMsg() = message
+    override fun getResponseMsg() = msg
 
 }
