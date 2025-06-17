@@ -7,6 +7,7 @@ import android.view.KeyEvent
 import android.widget.EditText
 import androidx.lifecycle.Observer
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.google.gson.Gson
 import com.rui.base.router.RouterActivityPath
 import com.rui.base.data.UserManager
@@ -85,10 +86,11 @@ class VerifyCodeActivity : BaseVmDbActivity<VerifyCodeViewModel, ActivityVerifyC
                 // 保存用户数据
                 UserManager.saveUserProfile(userProfile)
                 
-                // 验证码校验成功，跳转主页
+                // 验证码校验成功，跳转到视频播放页面
                 ToastUtils.showShort("登录成功")
-                // TODO: 跳转主页
-                // 示例: ARouter.getInstance().build(RouterActivityPath.Main.PAGER_MAIN).navigation()
+                ARouter.getInstance()
+                    .build(RouterActivityPath.Home.VIDEO_PLAYER)
+                    .navigation()
                 finish()
             }, {
                 // 验证码校验失败
@@ -102,7 +104,6 @@ class VerifyCodeActivity : BaseVmDbActivity<VerifyCodeViewModel, ActivityVerifyC
     override fun onBackPressed() {
         super.onBackPressed()
         // 返回登录页
-        // 示例: ARouter.getInstance().build(RouterActivityPath.Sign.PAGER_MOBILE_LOGIN).navigation()
         finish()
     }
 } 

@@ -15,6 +15,7 @@ class LoginActivity : BaseVmDbActivity<LoginViewModel, ActivityLoginBinding>() {
         super.onCreate(savedInstanceState)
     }
 
+
     override fun initContentView(): Int = R.layout.activity_login
 
     override fun initVariableId(): Int = BR.viewModel

@@ -41,6 +41,14 @@ class RouterActivityPath {
         const val POLICYPAGER = MINE + "/policyPage"
     }
 
+    /**
+     * 首页组件
+     */
+    object Home {
+        private const val HOME = "/home"
+        const val VIDEO_PLAYER = HOME + "/video_player"
+    }
+
     object Test {
         const val TEST = "/test"
         const val TESTPAGER = TEST + "/testPage"

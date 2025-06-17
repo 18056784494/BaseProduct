@@ -1,5 +1,6 @@
 package com.rui.mvvmlazy.base.activity
 
+import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.rui.mvvmlazy.base.BaseViewModel
