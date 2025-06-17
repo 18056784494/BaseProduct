@@ -20,6 +20,7 @@ import com.rui.mvvmlazy.utils.common.KLog
 class VideoPlayerActivity : BaseVmDbActivity<VideoPlayerViewModel, ActivityVideoPlayerBinding>() {
     private val TAG = "VideoPlayerActivity"
     private val playerManager = VideoPlayerManager.getInstance()
+    private var isFirstVideo = true
     
     override fun initContentView(): Int = R.layout.activity_video_player
 
@@ -38,12 +39,18 @@ class VideoPlayerActivity : BaseVmDbActivity<VideoPlayerViewModel, ActivityVideo
     private fun createObserver() {
         // 观察视频播放完成事件
         viewModel.videoCompleted.observe(this, Observer {
-            KLog.d(TAG, "视频播放完成，准备跳转")
-            // 跳转到登录页面
-            ARouter.getInstance()
-                .build(RouterActivityPath.Sign.LOGIN)
-                .navigation()
-            finish()
+            KLog.d(TAG, "视频播放完成，准备播放下一个视频")
+            if (isFirstVideo) {
+                // 播放第二个视频
+                playSecondVideo()
+                isFirstVideo = false
+            } else {
+                // 两个视频都播放完成，跳转到登录页面
+                ARouter.getInstance()
+                    .build(RouterActivityPath.Sign.LOGIN)
+                    .navigation()
+                finish()
+            }
         })
 
         // 观察视频播放错误事件
@@ -54,16 +61,6 @@ class VideoPlayerActivity : BaseVmDbActivity<VideoPlayerViewModel, ActivityVideo
                 .build(RouterActivityPath.Sign.LOGIN)
                 .navigation()
             finish()
-        })
-
-        // 观察播放进度
-        viewModel.videoProgress.observe(this, Observer { progress ->
-            binding.progressBar.progress = progress.toInt()
-        })
-
-        // 观察视频时长
-        viewModel.videoDuration.observe(this, Observer { duration ->
-            binding.progressBar.max = duration.toInt()
         })
     }
 
@@ -76,7 +73,7 @@ class VideoPlayerActivity : BaseVmDbActivity<VideoPlayerViewModel, ActivityVideo
             keepScreenOn = true,
             volume = 1.0f
         )
-        
+
         // 初始化播放器
         playerManager.init(this, binding.playerView, config)
         
@@ -118,23 +115,35 @@ class VideoPlayerActivity : BaseVmDbActivity<VideoPlayerViewModel, ActivityVideo
         playerManager.setOnErrorListener { error ->
             viewModel.onVideoError(error)
         }
-
-        // 设置播放进度监听
-        playerManager.setOnProgressListener { position, duration ->
-            viewModel.updateProgress(position)
-            viewModel.updateDuration(duration)
-        }
     }
 
     private fun startPlay() {
         try {
-            // 从 assets 目录播放视频
+            // 播放第一个视频
             val videoPath = "file:///android_asset/videos/opening.mp4"
-            KLog.d(TAG, "开始播放视频: $videoPath")
+            KLog.d(TAG, "开始播放第一个视频: $videoPath")
             playerManager.play(videoPath)
+            // 隐藏文字显示
+            binding.textOverlayContainer.visibility = android.view.View.GONE
         } catch (e: Exception) {
             KLog.e(TAG, "播放视频失败: ${e.message}")
             viewModel.onVideoError("播放视频失败: ${e.message}")
+        }
+    }
+
+    private fun playSecondVideo() {
+        try {
+            // 播放第二个视频
+            val videoPath = "file:///android_asset/videos/belo.mp4"
+            KLog.d(TAG, "开始播放第二个视频: $videoPath")
+            playerManager.play(videoPath)
+            // 显示文字
+            binding.textOverlayContainer.visibility = android.view.View.VISIBLE
+            binding.titleText.text = "Belo"
+            binding.overlayText.text = "嘿,冻坏了吧?\n能快进来,炉火还暖和着呢"
+        } catch (e: Exception) {
+            KLog.e(TAG, "播放第二个视频失败: ${e.message}")
+            viewModel.onVideoError("播放第二个视频失败: ${e.message}")
         }
     }
 
